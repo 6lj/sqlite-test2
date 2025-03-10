@@ -49,7 +49,7 @@ def register():
         except Exception as e:
             flash("Username already exists. Please choose a different username.")
             db.session.rollback()
-    return render_template('register.html')
+    return render_template('https://6lj.github.io/sqlite-test2/templates/register.html')
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -63,7 +63,7 @@ def login():
             return redirect(url_for('home'))
         else:
             flash("Invalid username or password.")
-    return render_template('login.html')
+    return render_template('https://6lj.github.io/sqlite-test2/templates/login.html')
 
 @app.route('/logout')
 def logout():
@@ -72,4 +72,4 @@ def logout():
     return redirect(url_for('home'))
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True) 
